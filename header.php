@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
     <head>
         <meta charset="utf-8">
-        <title>Hamburger site</title>
         <meta name="description" content="世界一美味しい！ハンバーガーショップ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('/images/hamburger_icon.png')); ?>" type="image/png">
         <?php wp_head(); ?>
     </head>
     
     <body>
+        <?php wp_body_open(); ?>
         <div class="c-cover c-cover__overlay"></div> <!--.c-cover__overlay用-->
         <header class="l-header p-header">
                 <h2 class="p-header__menu"><button class="p-header__button">Menu</button></h2>
