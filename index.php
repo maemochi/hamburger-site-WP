@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_sidebar(); ?>
 
     <main class="l-main-wrapper">
         <div class="p-main p-main--front">

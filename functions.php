@@ -13,5 +13,12 @@ add_action('wp_enqueue_scripts', 'add_files');
 function theme_setup() {
     // titleタグ
     add_theme_support('title-tag');
+    // メニュー
+    register_nav_menus(
+        array(
+            'main-menu' => 'メインメニュー',
+        )
+    );
 }
 add_action('after_setup_theme', 'theme_setup');
+
