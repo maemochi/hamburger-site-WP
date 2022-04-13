@@ -6,6 +6,8 @@ function add_files() {
     wp_enqueue_style('Google Fonts', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
     // メインのCSSファイル
     wp_enqueue_style('main-style', get_stylesheet_uri());
+    // JavaScriptファイル
+    wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true);
 }
 // add_filesを呼び出す
 add_action('wp_enqueue_scripts', 'add_files');
