@@ -1,0 +1,28 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-description {
+    margin-bottom: 15px;
+    @include m.mq(tab) {
+        margin-bottom: 30px;
+    }
+    @include m.mq(xl) {
+        margin-bottom: 70px;
+    }
+    &__title {
+        font-size: 28px;
+        color: v.$font-color-dark;
+        margin-bottom: 30px;
+        @include m.mq(tab) {
+            font-size: 36px;
+        }
+    }
+    &__text {
+        color: v.$font-color-dark;
+    }
+    &__title--single {
+        @include m.mq(tab) {
+            margin-bottom: 60px;
+        }
+    }
+}

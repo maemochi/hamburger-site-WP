@@ -1,0 +1,46 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-header {
+    text-align: center;
+    @include m.mq(pc) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        color: v.$font-color-main;
+        font-size: 40px;
+        transition: .3s;
+        padding: 40px 0;
+        @include m.mq(pc) {
+            font-size: clamp(43px, 4.195vw, 64px);
+            transition: .0s;
+            text-align: left;
+            // padding: 0 0 0 65px;
+            padding-left: 4%;
+        }
+    }
+    &__menu {
+        color: v.$font-color-main;
+        font-size: 20px;
+        transition: .3s;
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        cursor: pointer;
+        @include m.mq(tab) {
+            font-size: 34px;
+            transition: .3s;
+            top: 18px;
+            right: 26px;
+        }
+        @include m.mq(pc) {
+            display: none;
+        }
+    }
+    &__button {
+        color: v.$font-color-main;
+    }
+}

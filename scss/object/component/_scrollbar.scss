@@ -1,0 +1,10 @@
+
+.c-scrollbar--hidden {
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE, Edge 対応 */
+    scrollbar-width: none; /* Firefox 対応 */
+}
+/* Chrome, Safari 対応 */
+.c-scrollbar--hidden::-webkit-scrollbar {
+    display: none;
+}

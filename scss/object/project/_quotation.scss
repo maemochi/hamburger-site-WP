@@ -1,0 +1,14 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-quotation {
+    background-color: v.$content-color-light;
+    padding: 30px 20px;
+    @include m.mq(tab) {
+        padding: 50px 60px 50px 50px;
+    }
+    a {
+        color: #4A6C9B;
+        text-decoration: underline;
+    }
+}

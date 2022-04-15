@@ -1,0 +1,15 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.c-button {
+    background: linear-gradient(to bottom, #F2EDE9, #DED8D3); 
+    border: 1px solid;
+    font-weight: bold;
+    &--single {
+        width: min(100%, 429px);
+        aspect-ratio: 4 / 1;
+        border-radius: 20px;
+        border-color: v.$font-color-main;
+        color: v.$font-color-dark;
+    }
+}

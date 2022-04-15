@@ -1,0 +1,21 @@
+@use "../../foundation/mixin" as m;
+
+.p-container {
+    padding: 30px 20px 60px 20px;
+    @include m.mq(tab) {
+        padding-left: clamp(20px, 3.334vw, 40px);
+        padding-right: clamp(20px, 3.334vw, 40px);
+        padding-top: clamp(36px, 6vw, 60px);
+        padding-bottom: clamp(105px, 17.5vw, 150px);
+    }
+    @include m.mq(xl) {
+        padding-left: clamp(40px, 3.334vw, 100px);
+        padding-right: clamp(40px, 3.334vw, 100px);
+    }
+    &--single {
+        padding-bottom: 177px;
+        @include m.mq(tab) {
+            padding-bottom: clamp(228px, 38vw, 353px);
+        }
+    }
+}

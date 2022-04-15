@@ -1,0 +1,93 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-branch-menu {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 4.167vw, 80px);
+    padding: 20px;
+    @include m.mq(tab) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: clamp(40px, 6.667vw, 120px);
+        padding-bottom: clamp(40px, 6.667vw, 120px);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+        &--first {
+            background-image: url(../images/front-page_article_bg01.jpg);
+            background-position: center;
+            > .c-title {
+                color: #EAEAEA;
+            }
+        }
+        &--second {
+            background-image: url(../images/front-page_article_bg02.jpg);
+            background-position: center;
+        }
+        background-size: cover;
+        min-height: 642px;
+            @include m.mq(tab) {
+                min-height: 681px;
+                width: 43%;
+            }
+            @include m.mq(pc) {
+                min-height: 1000px;
+            }
+    }
+    &__title {
+        font-size: 41px;
+        position: absolute;
+        top: clamp(11px, 1.834vw, 20px);
+        left: clamp(10px, 1.667vw, 19px);
+        @include m.mq(tab) {
+            font-size: 44px;
+            @include m.mq(pc) {
+                font-size: clamp(44px, 4.293vw, 80px);
+            }
+        }
+    }
+    &__line {
+        position: absolute;
+        width: clamp(33px, 6.875vw, 63px);
+        top: 86px;
+        left: clamp(13.5px, 2.813vw, 26.5px);
+        @include m.mq(pc) {
+            top: clamp(86px, 8.39vw, 160.5px);
+        }
+        &--first {
+            display: none;
+            @include m.mq(tab) {
+                display: block;
+            }
+        }
+    }
+    &__subtitle {
+        font-size: 22px;
+        color: v.$font-color-dark;
+        padding: 19px 0 19px 10px;
+        @include m.mq(tab) {
+            font-size: 24px;
+        }
+    }
+    &__text {
+        padding: 0 14px 23px 10px;
+        min-height: 70px;
+    }
+    &__item {
+        background-color: rgba(255,255,255,.8);
+        margin: 0 20px 20px 20px;
+        min-height: 25%;
+        @include m.mq(pc) {
+            min-height: 15%;
+        }
+    }
+}

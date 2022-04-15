@@ -1,0 +1,92 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-card {
+    background-color: v.$content-color;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    @include m.mq(tab) {
+        flex-direction: row;
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        @include m.mq(tab) {
+            width: 50%;
+            aspect-ratio: 1 / 1;
+        }
+        @include m.mq(xl) {
+            aspect-ratio: 4 / 3;
+        }
+    }
+    &__text-box {
+        padding-left: clamp(17px, 3.542vw, 63px);
+        padding-right: clamp(17px, 3.542vw, 63px);
+        @include m.mq(tab) {
+            width: 50%;
+            height: 0;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        text-align: left;
+        margin: 8% 0;
+        @include m.mq(tab) {
+            white-space: nowrap;
+        }
+        @include m.mq(pc) {
+            font-size: clamp(20px, 1.951vw, 34px);
+        }
+        @include m.mq(xl) {
+            font-size: 34px;
+        }
+    }
+    &__subtitle {
+        text-align: left;
+        @include m.mq(pc) {
+            font-size: clamp(16px, 1.561vw, 24px);
+        }
+        @include m.mq(xl) {
+            font-size: 24px;
+        }
+    }
+    &__text {
+        text-align: left;
+        margin-top: 10px;
+        margin-right: 70px;
+        max-height: 114px;
+        @include m.mq(tab) {
+            margin-right: 10%;
+            margin-top: 10px;
+        }
+        p {
+            color: v.$font-color-light;
+        }
+    }
+    &__button {
+        background: #fff;
+        color: v.$font-color-main;
+        height: 42px;
+        width: 163px;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include m.mq(tab) {
+            width: clamp(163px, 15.902vw, 292px);
+            height: clamp(42px, 4.098vw, 76px);
+            margin-bottom: 25px;
+            margin-top: 6%;
+        }
+        @include m.mq(md) {
+            margin-top: 20%;
+        }
+        @include m.mq(xl) {
+            margin-top: clamp(40px, 3.334vw, 60px);
+        }
+    }
+}

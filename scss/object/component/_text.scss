@@ -1,0 +1,11 @@
+@use "../../foundation/variable" as v;
+
+.c-text {
+    font-size: 16px;
+    font-style: normal;
+    color: v.$font-color-dark;
+    line-height: 23px;
+    &--bold {
+        font-weight: bold;
+    }
+}
