@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/* 
-Theme Name: Hamburger site
-Description: RaiseTech最終課題
-Version: 1.0
-Author: まえ
-Author URI:
-*/
 body {
   font-family: "M PLUS 1p", sans-serif;
   position: relative;
@@ -96,7 +89,7 @@ li {
 .c-search-box {
   border: 1px solid #707070;
   border-radius: 10px;
-  background: url(../images/header_search_icon.svg) no-repeat 10px #FFFFFF;
+  background: url(images/header_search_icon.svg) no-repeat 10px #FFFFFF;
 }
 
 .c-title {
@@ -383,13 +376,13 @@ li {
   }
 }
 .p-main--front {
-  background-image: url(../images/mainvisual-sp@2x.jpg);
+  background-image: url(images/mainvisual-sp@2x.jpg);
   height: 285px;
   background-position: right;
 }
 @media screen and (min-width: 600px) {
   .p-main--front {
-    background-image: url(../images/mainvisual-pc.jpg);
+    background-image: url(images/mainvisual-pc.jpg);
   }
 }
 @media screen and (min-width: 1025px) {
@@ -398,7 +391,7 @@ li {
   }
 }
 .p-main--archive {
-  background-image: url(../images/page-title_archive@2x.jpg);
+  background-image: url(images/page-title_archive@2x.jpg);
   height: 283px;
   position: relative;
 }
@@ -424,18 +417,18 @@ li {
   padding: 0 0 0 25px;
 }
 .p-main--single {
-  background-image: url(../images/single_bg_sp.jpg);
+  background-image: url(images/single_bg_sp.jpg);
   height: 225px;
 }
 @media screen and (min-width: 600px) {
   .p-main--single {
     height: 500px;
-    background-image: url(../images/single_bg_tab.jpg);
+    background-image: url(images/single_bg_tab.jpg);
   }
 }
 @media screen and (min-width: 1400px) {
   .p-main--single {
-    background-image: url(../images/single_bg_pc.jpg);
+    background-image: url(images/single_bg_pc.jpg);
   }
 }
 @media screen and (min-width: 600px) {
@@ -444,18 +437,18 @@ li {
   }
 }
 .p-main--page {
-  background-image: url(../images/page_bg_sp.jpg);
+  background-image: url(images/page_bg_sp.jpg);
   height: 225px;
 }
 @media screen and (min-width: 600px) {
   .p-main--page {
     height: 500px;
-    background-image: url(../images/page_bg_tab.jpg);
+    background-image: url(images/page_bg_tab.jpg);
   }
 }
 @media screen and (min-width: 1400px) {
   .p-main--page {
-    background-image: url(../images/page_bg_pc.jpg);
+    background-image: url(images/page_bg_pc.jpg);
   }
 }
 
@@ -485,14 +478,14 @@ li {
   min-height: 642px;
 }
 .p-branch-menu__content--first {
-  background-image: url(../images/front-page_article_bg01.jpg);
+  background-image: url(images/front-page_article_bg01.jpg);
   background-position: center;
 }
 .p-branch-menu__content--first > .c-title {
   color: #EAEAEA;
 }
 .p-branch-menu__content--second {
-  background-image: url(../images/front-page_article_bg02.jpg);
+  background-image: url(images/front-page_article_bg02.jpg);
   background-position: center;
 }
 @media screen and (min-width: 600px) {
@@ -568,7 +561,7 @@ li {
 
 .p-access {
   z-index: 100;
-  background-image: url(../images/front-page_map.jpg);
+  background-image: url(images/front-page_map.jpg);
   background-size: cover;
   min-height: 691px;
   position: relative;
@@ -640,7 +633,7 @@ li {
 }
 
 .p-footer {
-  background-image: url(../images/footer_bg.jpg);
+  background-image: url(images/footer_bg.jpg);
   background-size: cover;
 }
 .p-footer__menu {
@@ -893,7 +886,7 @@ li {
 }
 .p-pagination__button--prev {
   order: 2;
-  background-image: url(../images/pagination_prev_icon.svg);
+  background-image: url(images/pagination_prev_icon.svg);
   width: 20px;
   height: 20px;
   position: relative;
@@ -905,7 +898,7 @@ li {
 }
 .p-pagination__button--next {
   order: 4;
-  background-image: url(../images/pagination_next_icon.svg);
+  background-image: url(images/pagination_next_icon.svg);
   width: 20px;
   height: 20px;
   position: relative;

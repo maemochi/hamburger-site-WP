@@ -23,14 +23,14 @@
         justify-content: flex-end;
         
         &--first {
-            background-image: url(../images/front-page_article_bg01.jpg);
+            background-image: url(images/front-page_article_bg01.jpg);
             background-position: center;
             > .c-title {
                 color: #EAEAEA;
             }
         }
         &--second {
-            background-image: url(../images/front-page_article_bg02.jpg);
+            background-image: url(images/front-page_article_bg02.jpg);
             background-position: center;
         }
         background-size: cover;

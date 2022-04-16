@@ -24,11 +24,11 @@
     }
 
     &--front {
-        background-image: url(../images/mainvisual-sp@2x.jpg);
+        background-image: url(images/mainvisual-sp@2x.jpg);
         height: 285px;
         background-position: right;
         @include m.mq(tab) {
-            background-image: url(../images/mainvisual-pc.jpg);
+            background-image: url(images/mainvisual-pc.jpg);
         }
         @include m.mq(pc) {
             height: 530px;
@@ -36,7 +36,7 @@
     }
 
     &--archive {
-        background-image: url(../images/page-title_archive@2x.jpg);
+        background-image: url(images/page-title_archive@2x.jpg);
         height: 283px;
         position: relative;
         @include m.mq(pc) {
@@ -61,14 +61,14 @@
     }
 
     &--single {
-        background-image: url(../images/single_bg_sp.jpg);
+        background-image: url(images/single_bg_sp.jpg);
         height: 225px;
         @include m.mq(tab) {
             height: 500px;
-            background-image: url(../images/single_bg_tab.jpg);
+            background-image: url(images/single_bg_tab.jpg);
         }
         @include m.mq(xl) {
-            background-image: url(../images/single_bg_pc.jpg);
+            background-image: url(images/single_bg_pc.jpg);
         }
         &__title {
             @include m.mq(tab) {
@@ -78,14 +78,14 @@
     }
 
     &--page {
-        background-image: url(../images/page_bg_sp.jpg);
+        background-image: url(images/page_bg_sp.jpg);
         height: 225px;
         @include m.mq(tab) {
             height: 500px;
-            background-image: url(../images/page_bg_tab.jpg);
+            background-image: url(images/page_bg_tab.jpg);
         }
         @include m.mq(xl) {
-            background-image: url(../images/page_bg_pc.jpg);
+            background-image: url(images/page_bg_pc.jpg);
         }
     }
 }
