@@ -32,28 +32,7 @@ function theme_setup() {
 add_action('after_setup_theme', 'theme_setup');
 
 
-//メニューの<li>からID除去
-// function removeMenuId( $id ){
-//     return $id = array();
-// }
-// add_filter('nav_menu_item_id', 'removeMenuId', 10);
-
-//メニューの<li>からクラス除去
-// function removeMenuClass( $classes ) {
-//     return $classes = array();
-// } 
-// add_filter( 'nav_menu_css_class', 'removeMenuClass', 10, 2 );
-
-//メニューの<li>に任意のクラスを付与する
-// function addMenuClass( $classes ) {
-//     $classes = array(
-//         'p-sidebar__main-menu'
-//     );
-//     return $classes;
-// } 
-// add_filter( 'nav_menu_css_class', 'addMenuClass', 10, 2 );
-
-//liタグのクラス設定、h3タグを付与
+//カスタムウォーカー編集：liタグのクラス設定、h3タグを付与-------------------------------
 class custom_walker_main_menu extends Walker_Nav_Menu {
  
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
