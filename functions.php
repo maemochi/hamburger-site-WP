@@ -1,26 +1,23 @@
 <?php
 
+// ファイル読み込み-------------------------------
 function add_files() {
-    // リセットCSS
-    wp_enqueue_style('reset-style', 'https://unpkg.com/ress/dist/ress.min.css');
-    // Google Fonts
-    wp_enqueue_style('Google Fonts', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
-    // メインのCSSファイル
-    wp_enqueue_style('main-style', get_stylesheet_uri('/css/style.css'));
+    wp_enqueue_style('reset-style', 'https://unpkg.com/ress/dist/ress.min.css'); // リセットCSS
+    wp_enqueue_style('Google Fonts', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap'); // Google Fonts
+    wp_enqueue_style('main-style', get_stylesheet_uri('/css/style.css')); // メインのCSSファイル
 
-	// WordPress提供のjquery.jsを読み込まない
+	
     // JavaScriptファイル
-	wp_deregister_script('jquery');
-    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true );
-    wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true);
+	wp_deregister_script('jquery'); // WordPress提供のjquery.jsを読み込まない
+    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true ); //jQueryの読み込み
+    wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true); //JSファイルの読み込み
 }
 // add_filesを呼び出す
 add_action('wp_enqueue_scripts', 'add_files');
 
 
 function theme_setup() {
-    // titleタグ
-    add_theme_support('title-tag');
+    add_theme_support('title-tag');// titleタグ
     // メニュー
     register_nav_menus(
         array(
