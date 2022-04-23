@@ -12,8 +12,7 @@ function add_files() {
     wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true ); //jQueryの読み込み
     wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true); //JSファイルの読み込み
 }
-// add_filesを呼び出す
-add_action('wp_enqueue_scripts', 'add_files');
+add_action('wp_enqueue_scripts', 'add_files'); // add_filesを呼び出す
 
 
 function theme_setup() {
@@ -22,16 +21,15 @@ function theme_setup() {
     register_nav_menus(
         array(
             'main-menu' => 'メインメニュー',
-            'footer_menu' => 'フッターメニュー'
+            'footer-menu' => 'フッターメニュー'
         )
     );
 }
 add_action('after_setup_theme', 'theme_setup');
 
 
-//カスタムウォーカー編集：liタグのクラス設定、h3タグを付与-------------------------------
+//カスタムウォーカー編集：メインメニュー　liタグのクラス設定、h3タグを付与-------------------------------
 class custom_walker_main_menu extends Walker_Nav_Menu {
- 
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
         if($depth == 0){ //第一階層のときにp-sidebar__main-menuと、h3タグを付ける
             $output .= '<li class="p-sidebar__main-menu"><h3><a href="'.$item->url.'">'.$item->title.'</a></h3>';//$item->url、$item->titleはリンク先と項目名の指定
@@ -39,5 +37,4 @@ class custom_walker_main_menu extends Walker_Nav_Menu {
             $output .= '<li class="p-sidebar__sub-menu"><a href="'.$item->url.'">'.$item->title.'</a>';
         }
     }
-
 }

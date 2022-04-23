@@ -10,9 +10,15 @@
         align-items: center;
         padding: 39px 0 34px 0;
     }
-    &__sub-menu {
+    // WP化　aタグへの記述に変更
+    // &__sub-menu {
+    //     color: v.$font-color-light;
+    //     font-size: 20px;
+    // }
+    a {
         color: v.$font-color-light;
         font-size: 20px;
+        padding: 0 20px;
     }
     &__copy {
         color: v.$font-color-light;
@@ -22,5 +28,19 @@
     &__line {
         width: 20px;
         height: 1px;
+    }
+    // WP化 spanタグをやめて疑似要素で区切り線を作成
+    li+li {
+        position: relative;
+    }
+    li+li:before {
+        display: block;
+        content: "";
+        height: 1.2em;
+        border-left: 2px solid #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
     }
 }
