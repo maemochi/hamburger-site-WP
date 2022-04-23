@@ -36,8 +36,10 @@
         }
     }
     &__main-menu {
-        font-size: 24px;
-        padding: 40px 0;
+        h3 {
+            font-size: 24px;
+            padding: 40px 0;//liタグの構成が違ったのでh3に設定し直し
+        }
     }
     &__sub-menu {
         font-size: 20px;
