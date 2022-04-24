@@ -1,3 +1,5 @@
+<!-- 固定ページを表示するためのテンプレート -->
+
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 

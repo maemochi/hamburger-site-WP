@@ -1,3 +1,5 @@
+<!-- 投稿を表示するためのテンプレート -->
+
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 <main class="l-main-wrapper">
