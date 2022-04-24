@@ -17,6 +17,7 @@ add_action('wp_enqueue_scripts', 'add_files'); // add_filesを呼び出す
 
 function theme_setup() {
     add_theme_support('title-tag');// titleタグ
+    add_theme_support('post-thumbnails'); // アイキャッチ画像の有効化
     // メニュー
     register_nav_menus(
         array(

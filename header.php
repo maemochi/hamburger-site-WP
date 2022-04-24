@@ -12,7 +12,7 @@
         <div class="c-cover c-cover__overlay"></div> <!--.c-cover__overlay用-->
         <header class="l-header p-header">
                 <h2 class="p-header__menu"><button class="p-header__button">Menu</button></h2>
-                <h1 class="c-title p-header__title">Hamburger</h1>
+                <h1 class="c-title p-header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php get_search_form(); ?>
         </header>
 
