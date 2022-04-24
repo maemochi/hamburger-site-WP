@@ -1,22 +1,8 @@
 <?php
 
-// ファイル読み込み-------------------------------
-function add_files() {
-    wp_enqueue_style('reset-style', 'https://unpkg.com/ress/dist/ress.min.css'); // リセットCSS
-    wp_enqueue_style('Google Fonts', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap'); // Google Fonts
-    wp_enqueue_style('main-style', get_stylesheet_uri('/css/style.css')); // メインのCSSファイル
-
-	
-    // JavaScriptファイル
-	wp_deregister_script('jquery'); // WordPress提供のjquery.jsを読み込まない
-    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true ); //jQueryの読み込み
-    wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true); //JSファイルの読み込み
-}
-add_action('wp_enqueue_scripts', 'add_files'); // add_filesを呼び出す
-
-
 function theme_setup() {
-    add_theme_support('title-tag');// titleタグ
+    // テーマサポート
+    add_theme_support('title-tag');// titleタグのサポートを許可
     add_theme_support('post-thumbnails'); // アイキャッチ画像の有効化
     // メニュー
     register_nav_menus(
@@ -27,6 +13,31 @@ function theme_setup() {
     );
 }
 add_action('after_setup_theme', 'theme_setup');
+
+// タイトル出力
+function theme_title( $title ) {
+    if ( is_front_page() && is_home() ) { //トップページなら
+        $title = get_bloginfo( 'name', 'display' );
+    } elseif ( is_singular() ) { //シングルページなら
+        $title = single_post_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'pre_get_document_title', 'theme_title' );
+
+
+// ファイル読み込み-------------------------------
+function add_files() {
+    wp_enqueue_style('reset-style', 'https://unpkg.com/ress/dist/ress.min.css'); // リセットCSS
+    wp_enqueue_style('Google Fonts', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap'); // Google Fonts
+    wp_enqueue_style('main-style', get_stylesheet_uri('/css/style.css')); // メインのCSSファイル
+	
+    // JavaScriptファイル
+	wp_deregister_script('jquery'); // WordPress提供のjquery.jsを読み込まない
+    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true ); //jQueryの読み込み
+    wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true); //JSファイルの読み込み
+}
+add_action('wp_enqueue_scripts', 'add_files'); // add_filesを呼び出す
 
 
 //カスタムウォーカー編集：メインメニュー　liタグのクラス設定、h3タグを付与-------------------------------

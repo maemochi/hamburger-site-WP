@@ -4,11 +4,17 @@
 <?php get_sidebar(); ?>
 <main class="l-main-wrapper">
         <div class="p-main p-main--single">
-            <h2 class="c-title c-title--m p-main__title p-main--single__title">h1 チーズバーガー</h2>
+            <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?>
+            <h2 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h2>
         </div>
         
         <article class="p-container p-container--single">
-            <section class="p-description">
+        <?php
+        if(have_posts()):  //1.投稿データがあるかの条件分岐
+            while(have_posts()):  //2.表示する投稿データがあれば繰り返し処理開始
+                the_post(); ?>
+            <?php the_content(); ?>
+            <!-- <section class="p-description">
                 <h2 class="c-title--dark c-title--m p-description__title p-description__title--single">見出しh2</h2>
                 <p class="c-text p-description__text">Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
             </section>
@@ -113,8 +119,10 @@
             </table>
             
             <button class="c-button c-button--single c-margin">ボタン</button>
-            <p class="c-text c-text--bold">boldboldboldboldboldboldbold</p>
+            <p class="c-text c-text--bold">boldboldboldboldboldboldbold</p> -->
         </article>
+    <?php endwhile; ?>
+    <?php endif; ?>
     </main>
 
 <?php get_footer(); ?>

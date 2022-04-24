@@ -417,19 +417,16 @@ li {
   padding: 0 0 0 25px;
 }
 .p-main--single {
-  background-image: url(images/single_bg_sp.jpg);
   height: 225px;
+  position: relative;
 }
 @media screen and (min-width: 600px) {
   .p-main--single {
     height: 500px;
-    background-image: url(images/single_bg_tab.jpg);
   }
 }
-@media screen and (min-width: 1400px) {
-  .p-main--single {
-    background-image: url(images/single_bg_pc.jpg);
-  }
+.p-main--single__title {
+  position: absolute;
 }
 @media screen and (min-width: 600px) {
   .p-main--single__title {
@@ -450,6 +447,12 @@ li {
   .p-main--page {
     background-image: url(images/page_bg_pc.jpg);
   }
+}
+.p-main__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .p-branch-menu {
