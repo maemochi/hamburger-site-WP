@@ -2,6 +2,13 @@
 
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
+
+<!-- ループ処理 -->
+<?php
+    if(have_posts()):  //1.投稿データがあるかの条件分岐
+        while(have_posts()):  //2.表示する投稿データがあれば繰り返し処理開始
+            the_post(); ?>
+
 <main class="l-main-wrapper">
         <div class="p-main p-main--single">
             <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?>
@@ -9,11 +16,7 @@
         </div>
         
         <article class="p-container p-container--single">
-        <?php
-        if(have_posts()):  //1.投稿データがあるかの条件分岐
-            while(have_posts()):  //2.表示する投稿データがあれば繰り返し処理開始
-                the_post(); ?>
-            <?php the_content(); ?>
+        <?php the_content(); ?><!--投稿本文を取得-->
             <!-- <section class="p-description">
                 <h2 class="c-title--dark c-title--m p-description__title p-description__title--single">見出しh2</h2>
                 <p class="c-text p-description__text">Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
@@ -121,8 +124,10 @@
             <button class="c-button c-button--single c-margin">ボタン</button>
             <p class="c-text c-text--bold">boldboldboldboldboldboldbold</p> -->
         </article>
-    <?php endwhile; ?>
-    <?php endif; ?>
     </main>
+<?php endwhile; //5.繰り返し処理ここまで。投稿データがまだあればwhileに戻る。なければ終了
+    else: //6.投稿データがなければ//7.ない時の処理
+?><p>表示する記事がありません</p>
+<?php endif; ?><!--8.条件分岐終了-->
 
 <?php get_footer(); ?>
