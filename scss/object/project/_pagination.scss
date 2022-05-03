@@ -59,7 +59,6 @@
         }
         &::before {
             content: "";
-            display: inline-block;
             background: url(images/pagination_prev_icon.svg) no-repeat;
             width: 20px;
             height: 20px;
@@ -75,7 +74,6 @@
         }
         &::after {
             content: "";
-            display: inline-block;
             background: url(images/pagination_next_icon.svg) no-repeat;
             width: 20px;
             height: 20px;
