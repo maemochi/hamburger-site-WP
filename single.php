@@ -11,8 +11,13 @@
 
 <main class="l-main-wrapper">
         <div class="p-main p-main--single">
-            <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?>
-            <h2 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h2>
+            <?php if(has_post_thumbnail()): ?>
+                <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?>
+                <?php else: ?>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/images/single_bg_pc.jpg')); ?>" alt="" class="p-main__img p-main--single__img">
+                <?php endif; ?>
+            <!-- <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?> -->
+            <h1 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h1>
         </div>
         
         <article class="p-container p-container--single">
