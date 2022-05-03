@@ -1,84 +1,85 @@
 @use "../../foundation/mixin" as m;
 @use "../../foundation/variable" as v;
 
-.p-pagination {
+.wp-pagenavi {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 30px 20px;
+    color: v.$font-color-main;
+    gap: 15px;
     @include m.mq(tab) {
         justify-content: center;
         padding: 0 0 30px 0;
+        gap: 15px;
     }
     @include m.mq(pc) {
-        justify-content: center;
         padding: 0 0 64px 0;
     }
-    &__list {
+    .page, .current {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
-        order: 3;
-        display: none;
+        visibility: hidden;
         @include m.mq(tab) {
-            display: flex;
-            gap: 15px;
-            a {
-                display: block;
-                width: 35px;
-                height: 35px;
-                line-height: 35px;
-                text-align: center;
-                border: 1px solid v.$font-color-main;
-                &:hover {
-                    background-color: v.$content-color;
-                    color: v.$font-color-light;
-                }
+            visibility: visible;
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid v.$font-color-main;
+            &:hover {
+                background-color: v.$content-color;
+                color: v.$font-color-light;
             }
         }
     }
-    &__page {
+    .current {
+        @include m.mq(tab) {
+        background-color: v.$content-color;
+        color: v.$font-color-light;
+        }
+    }
+    .pages {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         color: v.$font-color-main;
-        order: 1;
         display: none;
         @include m.mq(tab) {
             display: block;
         }
     }
-    &__button--prev {
-        order: 2;
-        background-image: url(images/pagination_prev_icon.svg);
-        width: 20px;
-        height: 20px;
-        position: relative;
+    .previouspostslink {
+        display: flex;
+        align-items: center; //flexで疑似要素との中央揃え
+        gap: 8px;
         @include m.mq(tab) {
-            margin: 0 15px;
+            font-size: 0;
+            gap: 0;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url(images/pagination_prev_icon.svg) no-repeat;
+            width: 20px;
+            height: 20px;
         }
     }
-    &__button--next {
-        order: 4;
-        background-image: url(images/pagination_next_icon.svg);
-        width: 20px;
-        height: 20px;
-        position: relative;
+    .nextpostslink {
+        display: flex;
+        align-items: center; //flexで疑似要素との中央揃え
+        gap: 8px;
         @include m.mq(tab) {
-            margin: 0 15px;
+            font-size: 0;
+            gap: 0;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            background: url(images/pagination_next_icon.svg) no-repeat;
+            width: 20px;
+            height: 20px;
         }
     }
-    &__text {
-        white-space: nowrap;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        @include m.mq(tab) {
-            display: none;
-        }
-        &--prev {
-            left: 25px;
-        }
-        &--next {
-            right: 25px;
-        }
-    }
+
 }
