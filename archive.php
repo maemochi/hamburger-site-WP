@@ -42,26 +42,6 @@
             <?php endif; ?>
         </article>
 
-        <!-- <div class="p-pagination">
-            <ul class="p-pagination__list">
-                <li class="p-pagination__item"><a href="#">1</a></li>
-                <li class="p-pagination__item"><a href="#">2</a></li>
-                <li class="p-pagination__item"><a href="#">3</a></li>
-                <li class="p-pagination__item"><a href="#">4</a></li>
-                <li class="p-pagination__item"><a href="#">5</a></li>
-                <li class="p-pagination__item"><a href="#">6</a></li>
-                <li class="p-pagination__item"><a href="#">7</a></li>
-                <li class="p-pagination__item"><a href="#">8</a></li>
-                <li class="p-pagination__item"><a href="#">9</a></li>
-            </ul>
-            <p class="p-pagination__page">page 1/10</p>
-            <a href="#" class="p-pagination__button--prev">
-                <p class="p-pagination__text p-pagination__text--prev">前へ</p>
-            </a>
-            <a href="#" class="p-pagination__button--next">
-                <p class="p-pagination__text p-pagination__text--next">次へ</p>
-            </a>
-        </div> -->
         <?php wp_pagenavi(); ?>
 
     </main>

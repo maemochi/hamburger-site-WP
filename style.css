@@ -674,8 +674,6 @@ li {
 }
 
 .p-card {
-  background-color: #3C2B1C;
-  text-align: center;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -688,8 +686,10 @@ li {
 }
 .p-card__img {
   width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 4/3;
 }
 @media screen and (min-width: 600px) {
   .p-card__img {
@@ -703,18 +703,20 @@ li {
   }
 }
 .p-card__text-box {
+  background-color: #3C2B1C;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
   padding-left: clamp(17px, 3.542vw, 63px);
   padding-right: clamp(17px, 3.542vw, 63px);
 }
 @media screen and (min-width: 600px) {
   .p-card__text-box {
     width: 50%;
-    height: 0;
   }
 }
 .p-card__title {
   font-size: 20px;
-  text-align: left;
   margin: 8% 0;
 }
 @media screen and (min-width: 600px) {
@@ -732,33 +734,19 @@ li {
     font-size: 34px;
   }
 }
-.p-card__subtitle {
-  text-align: left;
+.p-card h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 1025px) {
-  .p-card__subtitle {
+  .p-card h2 {
     font-size: clamp(16px, 1.561vw, 24px);
   }
 }
 @media screen and (min-width: 1400px) {
-  .p-card__subtitle {
+  .p-card h2 {
     font-size: 24px;
   }
-}
-.p-card__text {
-  text-align: left;
-  margin-top: 10px;
-  margin-right: 70px;
-  max-height: 114px;
-}
-@media screen and (min-width: 600px) {
-  .p-card__text {
-    margin-right: 10%;
-    margin-top: 10px;
-  }
-}
-.p-card__text p {
-  color: #fff;
 }
 .p-card__button {
   background: #fff;
@@ -769,6 +757,8 @@ li {
   font-size: 16px;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 600px) {
   .p-card__button {
