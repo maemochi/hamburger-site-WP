@@ -2,8 +2,6 @@
 @use "../../foundation/variable" as v;
 
 .p-card {
-    // background-color: v.$content-color;　//WP調整
-    // text-align: center; //WP調整
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -15,7 +13,7 @@
         width: 100%;
         height: auto; //WP化 追加
         object-fit: cover;
-        aspect-ratio: 4 / 3; //WP化 追加
+        aspect-ratio: 16 / 9; //WP化 追加
         @include m.mq(tab) {
             width: 50%;
             aspect-ratio: 1 / 1;
@@ -33,13 +31,11 @@
         padding-right: clamp(17px, 3.542vw, 63px);
         @include m.mq(tab) {
             width: 50%;
-            // height: 0;//WP調整
         }
     }
 
     &__title {
         font-size: 20px;
-        // text-align: left;
         margin: 8% 0;
         @include m.mq(tab) {
             white-space: nowrap;
@@ -51,7 +47,7 @@
             font-size: 34px;
         }
     }
-    //WP調整
+    //WP調整 h2追加
     h2 {
         font-size: 16px;
         margin-bottom: 10px;
@@ -62,29 +58,6 @@
             font-size: 24px;
         }
     }
-    // 以下は不使用のためコメントアウト
-    // &__subtitle {
-    //     text-align: left;
-    //     @include m.mq(pc) {
-    //         font-size: clamp(16px, 1.561vw, 24px);
-    //     }
-    //     @include m.mq(xl) {
-    //         font-size: 24px;
-    //     }
-    // }
-    // &__text {
-    //     text-align: left;
-    //     margin-top: 10px;
-    //     margin-right: 70px;
-    //     max-height: 114px;
-    //     @include m.mq(tab) {
-    //         margin-right: 10%;
-    //         margin-top: 10px;
-    //     }
-    //     p {
-    //         color: v.$font-color-light;
-    //     }
-    // }
     &__button {
         background: #fff;
         color: v.$font-color-main;

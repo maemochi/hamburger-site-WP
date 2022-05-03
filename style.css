@@ -689,7 +689,7 @@ li {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
 }
 @media screen and (min-width: 600px) {
   .p-card__img {
