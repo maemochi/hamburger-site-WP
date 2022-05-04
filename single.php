@@ -16,7 +16,6 @@
                 <?php else: ?>
                     <img src="<?php echo esc_url(get_theme_file_uri('/images/single_bg_pc.jpg')); ?>" alt="" class="p-main__img p-main--single__img">
                 <?php endif; ?>
-            <!-- <?php the_post_thumbnail('full', array('class' => "p-main__img p-main--single__img")); ?> -->
             <h1 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h1>
         </div>
         
