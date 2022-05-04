@@ -4,6 +4,7 @@ function theme_setup() {
     // テーマサポート
     add_theme_support('title-tag');// titleタグのサポートを許可
     add_theme_support('post-thumbnails'); // アイキャッチ画像の有効化
+    add_theme_support( 'automatic-feed-links' );//フィードの設定
     // メニュー
     register_nav_menus(
         array(
