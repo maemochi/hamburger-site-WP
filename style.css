@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*
+Theme Name: Hamburger-site
+Description: 最終課題 デザインカンプからコーディング・WordPress化
+Version: 1.0.0
+Theme URI: https://github.com/maemochi/hamburger-site-WP
+Author: Mae
+Author URI: https://github.com/maemochi
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: hamburgersite
+*/
+
+
 body {
   font-family: "M PLUS 1p", sans-serif;
   position: relative;
