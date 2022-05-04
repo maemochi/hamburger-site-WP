@@ -31,8 +31,7 @@
                 <div class="p-card__text-box">
                     <h3 class="c-title p-card__title"><?php the_title(); ?></h3>
                     <?php the_content(''); ?>
-                    <!-- <h4 class="c-title p-card__subtitle">小見出しが入ります</h4> -->
-                    <!-- <div class="c-scrollbar--hidden p-card__text"><p class="c-text"><?php the_excerpt(); ?></p></div> -->
+                    <!-- <?php the_excerpt(); ?> -->
                     <button onclick="location.href='<?php the_permalink(); ?>'" class="c-button p-card__button">詳しく見る</button>
                 </div>
             </section>

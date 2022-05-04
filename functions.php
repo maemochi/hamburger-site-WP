@@ -50,3 +50,14 @@ class custom_walker_main_menu extends Walker_Nav_Menu {
         }
     }
 }
+
+//全角空白を入れて検索した場合、半角空白に置き換え
+function empty_search( $query ) {
+    if ( $query->is_main_query() && $query->is_search && ! $query->is_admin ) {
+    $s = $query->get( 's' );
+    $s = str_replace('　',' ', $s );
+    $query->set( 's', $s );
+    }
+}
+add_action( 'pre_get_posts', 'empty_search' );
+
