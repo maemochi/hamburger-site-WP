@@ -48,7 +48,8 @@
   }
   .wp-block-button__link {
     color: v.$font-color-dark;
-    background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
+    background-color: #DED8D3; //デフォルト色として設定
+    // background: linear-gradient(to bottom, #F2EDE9, #DED8D3);　//これだと投稿編集ページからの色変更ができなくなる
     border: 1px solid;
     border-color: v.$font-color-main;
     font-weight: bold;

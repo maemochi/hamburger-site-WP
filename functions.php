@@ -5,7 +5,7 @@ function theme_setup() {
     add_theme_support('title-tag');// titleタグのサポートを許可
     add_theme_support('post-thumbnails'); // アイキャッチ画像の有効化
     add_theme_support( 'automatic-feed-links' );//フィードの設定
-
+    add_editor_style();//editor-style.cssのテーマサポートの追加
     // メニュー
     register_nav_menus(
         array(
@@ -16,7 +16,7 @@ function theme_setup() {
 }
 add_action('after_setup_theme', 'theme_setup');
 
-add_editor_style();//editor-style.cssのテーマサポートの追加
+
 
 // タイトル出力
 function theme_title( $title ) {

@@ -1079,7 +1079,7 @@ li {
 }
 .p-article .wp-block-button__link {
   color: #3C2A10;
-  background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
+  background-color: #DED8D3;
   border: 1px solid;
   border-color: #707070;
   font-weight: bold;
