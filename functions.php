@@ -5,6 +5,7 @@ function theme_setup() {
     add_theme_support('title-tag');// titleタグのサポートを許可
     add_theme_support('post-thumbnails'); // アイキャッチ画像の有効化
     add_theme_support( 'automatic-feed-links' );//フィードの設定
+
     // メニュー
     register_nav_menus(
         array(
@@ -14,6 +15,8 @@ function theme_setup() {
     );
 }
 add_action('after_setup_theme', 'theme_setup');
+
+add_editor_style();//editor-style.cssのテーマサポートの追加
 
 // タイトル出力
 function theme_title( $title ) {
@@ -52,7 +55,7 @@ class custom_walker_main_menu extends Walker_Nav_Menu {
     }
 }
 
-//全角空白を入れて検索した場合、半角空白に置き換え
+//全角空白を入れて検索した場合、半角空白に置き換え-------------------------------
 function empty_search( $query ) {
     if ( $query->is_main_query() && $query->is_search && ! $query->is_admin ) {
     $s = $query->get( 's' );

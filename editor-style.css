@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*
+Theme Name: Hamburger-site
+Description: 最終課題 デザインカンプからコーディング・WordPress化
+Version: 1.0.0
+Theme URI: https://github.com/maemochi/hamburger-site-WP
+Author: Mae
+Author URI: https://github.com/maemochi
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: hamburgersite
+*/
+
+
 body {
   font-family: "M PLUS 1p", sans-serif;
   position: relative;
@@ -1031,59 +1044,6 @@ li {
   .p-table__first-column {
     width: 30%;
   }
-}
-
-.p-article {
-  color: #3C2A10;
-}
-.p-article h2 {
-  font-size: 28px;
-}
-.p-article h2, .p-article h3, .p-article h4, .p-article h5, .p-article h6 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.p-article p {
-  line-height: 23px;
-}
-.p-article blockquote {
-  background-color: #F5F5F5;
-  padding: 30px 20px;
-}
-.p-article blockquote p {
-  margin-bottom: 30px;
-}
-.p-article blockquote cite {
-  font-style: normal;
-  line-height: 23px;
-}
-.p-article blockquote a {
-  color: #4A6C9B;
-  text-decoration: underline;
-}
-.p-article ol, .p-article ul {
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
-}
-.p-article li {
-  list-style: inherit;
-}
-.p-article pre {
-  background-color: #F5F5F5;
-  padding: 50px 60px 50px 50px;
-  line-height: 23px;
-}
-.p-article th, .p-article td {
-  border: solid 1px #707070;
-  padding: 30px;
-}
-.p-article .wp-block-button__link {
-  color: #3C2A10;
-  background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
-  border: 1px solid;
-  border-color: #707070;
-  font-weight: bold;
-  padding: 30px;
 }
 
 /* Foundation

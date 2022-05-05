@@ -19,7 +19,7 @@
             <h2 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h2>
         </div>
         
-        <article class="p-container p-container--single">
+        <article class="p-container p-container--single p-article"><!--WP化 調整用にp-articleを追加-->
         <?php the_content(); ?><!--投稿本文を取得-->
         </article>
         

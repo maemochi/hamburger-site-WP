@@ -1,0 +1,58 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+.p-article {
+  color: v.$font-color-dark;
+  h2 {
+    font-size: 28px;
+  }
+  h2,h3,h4,h5,h6 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: 23px;
+  }
+  // 引用文
+  blockquote {
+    background-color: #F5F5F5;
+    padding: 30px 20px;
+    p {
+      margin-bottom: 30px;
+    }
+    cite {
+      font-style: normal;
+      line-height: 23px;
+    }
+    a {
+      color: #4A6C9B;
+      text-decoration: underline;
+    }
+  }
+
+  ol,ul {
+    padding-inline-start: 40px; //リセットcssでpadding:0になっているため修正
+  }
+  li {
+    list-style: inherit;
+  }
+
+  pre {
+    background-color: v.$content-color-light;
+    padding: 50px 60px 50px 50px;
+    line-height: 23px;
+  }
+  th, td {
+    border: solid 1px v.$font-color-main;
+    padding: 30px;
+  }
+  .wp-block-button__link {
+    color: v.$font-color-dark;
+    background: linear-gradient(to bottom, #F2EDE9, #DED8D3);
+    border: 1px solid;
+    border-color: v.$font-color-main;
+    font-weight: bold;
+    padding: 30px;
+  }
+
+}//p-article
