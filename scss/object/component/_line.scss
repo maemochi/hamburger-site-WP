@@ -1,16 +1,16 @@
 .c-line {
-    width: 32px;
-    height: 4px;
-    background: #fff;
-    display: block;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  display: block;
 
-    &--deg45 {
-        transform: rotate(45deg);
-    }
-    &--deg135 {
-        transform: rotate(135deg);
-    }
-    &--vertical {
-        transform: rotate(90deg);
-    }
+  &--deg45 {
+    transform: rotate(45deg);
+  }
+  &--deg135 {
+    transform: rotate(135deg);
+  }
+  &--vertical {
+    transform: rotate(90deg);
+  }
 }

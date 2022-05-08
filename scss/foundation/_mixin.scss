@@ -1,13 +1,13 @@
 $breakpoints: (
-    sp: 'screen and (min-width: 0px)',
-    tab: 'screen and (min-width: 600px)',
-    md: 'screen and (min-width: 830px)',
-    pc: 'screen and (min-width: 1025px)',
-    xl: 'screen and (min-width: 1400px)',
+  sp: "screen and (min-width: 0px)",
+  tab: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 830px)",
+  pc: "screen and (min-width: 1025px)",
+  xl: "screen and (min-width: 1400px)",
 );
 
 @mixin mq($bp) {
-    @media #{map-get($breakpoints, $bp)} {
-        @content;
-    }
+  @media #{map-get($breakpoints, $bp)} {
+    @content;
+  }
 }

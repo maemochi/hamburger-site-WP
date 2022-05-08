@@ -2,37 +2,37 @@
 @use "../../foundation/variable" as v;
 
 .p-search-form {
+  @include m.mq(pc) {
+    padding: 0 30px 0 0;
+  }
+  &__button {
+    padding: 5px 15px;
+    color: v.$font-color-main;
+    height: 46px;
+    width: 78px;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: bold;
+    @include m.mq(tab) {
+      width: 136px;
+      transition: 0s;
+    }
     @include m.mq(pc) {
-        padding: 0 30px 0 0;
+      width: clamp(78px, 7.61vw, 136px);
     }
-    &__button {
-        padding: 5px 15px;
-        color: v.$font-color-main;
-        height: 46px;
-        width: 78px;
-        transition: .3s;
-        border-radius: 10px;
-        font-weight: bold;
-        @include m.mq(tab) {
-            width: 136px;
-            transition: .0s;
-        }
-        @include m.mq(pc) {
-            width: clamp(78px, 7.61vw, 136px);
-        }
+  }
+  &__search-box {
+    height: 46px;
+    width: 230px;
+    transition: 0.3s;
+    padding: 0 10px 0 40px;
+    margin: 0 10px 0 0;
+    @include m.mq(tab) {
+      width: 396px;
+      transition: 0s;
     }
-    &__search-box {
-        height: 46px;
-        width: 230px;
-        transition: .3s;
-        padding: 0 10px 0 40px;
-        margin: 0 10px 0 0;
-        @include m.mq(tab) {
-            width: 396px;
-            transition: .0s;
-        }
-        @include m.mq(pc) {
-            width: clamp(300px, 29.268vw, 396px);
-        }
+    @include m.mq(pc) {
+      width: clamp(300px, 29.268vw, 396px);
     }
+  }
 }

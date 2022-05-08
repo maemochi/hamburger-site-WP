@@ -43,6 +43,6 @@
 
         <?php wp_pagenavi(); ?>
 
-    </main>
+</main>
 
 <?php get_footer(); ?>

@@ -2,13 +2,13 @@
 @use "../../foundation/mixin" as m;
 
 .c-title {
-   color: v.$font-color-light; 
-   font-weight: bold;
-   &--dark {
-      color: v.$font-color-dark;
-      font-weight: bold;
-   }
-   &--m {
-      font-family: 'M PLUS 1p', sans-serif;
-   }
+  color: v.$font-color-light;
+  font-weight: bold;
+  &--dark {
+    color: v.$font-color-dark;
+    font-weight: bold;
+  }
+  &--m {
+    font-family: "M PLUS 1p", sans-serif;
+  }
 }

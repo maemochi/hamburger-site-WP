@@ -2,15 +2,16 @@
 @use "../../foundation/variable" as v;
 
 .p-table {
-    width: 100%;
-    th, td {
-        padding: 28px 20px 27px 30px;
-        color: v.$font-color-dark;
+  width: 100%;
+  th,
+  td {
+    padding: 28px 20px 27px 30px;
+    color: v.$font-color-dark;
+  }
+  &__first-column {
+    width: 40%;
+    @include m.mq(tab) {
+      width: 30%;
     }
-    &__first-column {
-        width: 40%;
-        @include m.mq(tab) {
-            width: 30%;
-        }
-    }
+  }
 }

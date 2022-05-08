@@ -1,7 +1,7 @@
 @use "../../foundation/variable" as v;
 
 .c-search-box {
-    border: 1px solid v.$font-color-main;
-    border-radius: 10px;
-    background: url(images/header_search_icon.svg) no-repeat 10px #FFFFFF;
+  border: 1px solid v.$font-color-main;
+  border-radius: 10px;
+  background: url(images/header_search_icon.svg) no-repeat 10px #ffffff;
 }

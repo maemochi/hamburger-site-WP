@@ -2,28 +2,29 @@
 @use "../foundation/variable" as v;
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
-    position: relative;
-    @include m.mq(pc) {
-        display: grid;
-        // grid-template-columns: auto 367px;
-        grid-template-columns: 4fr 1fr;
-        grid-template-rows: 217px auto 150px;
-    }
+  font-family: "M PLUS 1p", sans-serif;
+  position: relative;
+  @include m.mq(pc) {
+    display: grid;
+    // grid-template-columns: auto 367px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 217px auto 150px;
+  }
 }
 
-h1,h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 h3 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
-    text-decoration: none;
-    color: v.$font-color-main;
+  text-decoration: none;
+  color: v.$font-color-main;
 }
 li {
-    list-style: none;
+  list-style: none;
 }

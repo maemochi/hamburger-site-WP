@@ -2,63 +2,63 @@
 @use "../../foundation/variable" as v;
 
 .p-access {
-        z-index: 100;
-        background-image: url(images/front-page_map.jpg);
-        background-size: cover;
-        min-height: 691px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        @include m.mq(tab) {
-            min-height: 415px;
-        }
-        @include m.mq(pc) {
-            min-height: 649px;
-        }
-        &__title {
-            margin-top: clamp(40px, 6.667vw, 83px);
-            margin-left: clamp(40px, 6.667vw, 120px);
-            z-index: 300;
-            font-size: 30px;
-            @include m.mq(pc) {
-                font-size: 36px;
-            }
-        }
-        &__line {
-            z-index: 300;
-            width: 75px;
-            height: 2px;
-            margin-top: clamp(20px, 6.667vw , 55px);
-            margin-bottom: clamp(20px, 6.667vw , 55px);
-            margin-left: clamp(40px, 6.667vw, 120px);
-        }
-        &__text {
-            z-index: 300;
-            color: v.$font-color-light;
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 33px;
-            padding-left: clamp(40px, 6.667vw, 120px);
-            padding-right: clamp(40px, 6.667vw, 120px);
-            padding-bottom: 5%;
-            @include m.mq(pc) {
-                font-size: 16px;
-                max-width: 55%;
-            }
-        }
-        
-        &__cover {
-            position: absolute;
-            z-index: 200;
-            &--second {
-                height: 60%;
-                @include m.mq(tab) {
-                    height: 100%;
-                }
-                @include m.mq(pc) {
-                    height: 100%;
-                    width: 60%;
-                }
-            }
-        }
+  z-index: 100;
+  background-image: url(images/front-page_map.jpg);
+  background-size: cover;
+  min-height: 691px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include m.mq(tab) {
+    min-height: 415px;
+  }
+  @include m.mq(pc) {
+    min-height: 649px;
+  }
+  &__title {
+    margin-top: clamp(40px, 6.667vw, 83px);
+    margin-left: clamp(40px, 6.667vw, 120px);
+    z-index: 300;
+    font-size: 30px;
+    @include m.mq(pc) {
+      font-size: 36px;
+    }
+  }
+  &__line {
+    z-index: 300;
+    width: 75px;
+    height: 2px;
+    margin-top: clamp(20px, 6.667vw, 55px);
+    margin-bottom: clamp(20px, 6.667vw, 55px);
+    margin-left: clamp(40px, 6.667vw, 120px);
+  }
+  &__text {
+    z-index: 300;
+    color: v.$font-color-light;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 33px;
+    padding-left: clamp(40px, 6.667vw, 120px);
+    padding-right: clamp(40px, 6.667vw, 120px);
+    padding-bottom: 5%;
+    @include m.mq(pc) {
+      font-size: 16px;
+      max-width: 55%;
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    z-index: 200;
+    &--second {
+      height: 60%;
+      @include m.mq(tab) {
+        height: 100%;
+      }
+      @include m.mq(pc) {
+        height: 100%;
+        width: 60%;
+      }
+    }
+  }
 }

@@ -1,9 +1,10 @@
 @use "../../foundation/variable" as v;
 
 .c-table {
-    border-collapse: collapse;
-    background-color: #fff;
-    th, td {
-        border: solid 1px v.$font-color-main;
-    }
+  border-collapse: collapse;
+  background-color: #fff;
+  th,
+  td {
+    border: solid 1px v.$font-color-main;
+  }
 }
