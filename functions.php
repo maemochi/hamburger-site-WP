@@ -38,7 +38,7 @@ function add_files() {
 	
     // JavaScriptファイル
 	wp_deregister_script('jquery'); // WordPress提供のjquery.jsを読み込まない
-    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.6.0.min.js','','',true ); //jQueryの読み込み
+    wp_enqueue_script('jquery', get_theme_file_uri().'/js/jquery-3.6.0.min.js', array(), '');//JSファイル　ダウンロード版に変更
     wp_enqueue_script('main-script', get_theme_file_uri().'/js/script.js', array(), '', true); //JSファイルの読み込み
 }
 add_action('wp_enqueue_scripts', 'add_files'); // add_filesを呼び出す
