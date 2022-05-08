@@ -22,6 +22,10 @@
         <article class="p-container p-container--single p-article"><!--WP化 調整用にp-articleを追加-->
             <?php the_content(); ?><!--投稿本文を取得-->
         </article>
+        <?php wp_link_pages( array(
+            'before' => '<div class="wp-pagenavi wp-pagenavi--post">',
+            'after' => '</div>',
+        )); ?>
 </main>
 
 <?php endwhile; //5.繰り返し処理ここまで。投稿データがまだあればwhileに戻る。なければ終了

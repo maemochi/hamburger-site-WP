@@ -933,6 +933,28 @@ li {
   width: 20px;
   height: 20px;
 }
+.wp-pagenavi--post {
+  display: flex;
+  justify-content: center;
+}
+.wp-pagenavi--post .post-page-numbers {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  visibility: visible;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #707070;
+}
+.wp-pagenavi--post .post-page-numbers:hover {
+  background-color: #3c2b1c;
+  color: #fff;
+}
+.wp-pagenavi--post .current {
+  background-color: #3c2b1c;
+  color: #fff;
+}
 
 .p-quotation {
   background-color: #f5f5f5;

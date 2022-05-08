@@ -80,4 +80,27 @@
       height: 20px;
     }
   }
+  // 投稿・固定ページの改ページ用
+  &--post {
+    display: flex;
+    justify-content: center;
+    .post-page-numbers {
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      visibility: visible;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      border: 1px solid v.$font-color-main;
+      &:hover {
+        background-color: v.$content-color;
+        color: v.$font-color-light;
+      }
+    }
+    .current {
+      background-color: v.$content-color;
+      color: v.$font-color-light;
+    }
+  }
 }
