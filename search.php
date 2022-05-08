@@ -29,8 +29,15 @@
                     <?php endif; ?>
                     <div class="p-card__text-box">
                         <h3 class="c-title p-card__title"><?php the_title(); ?></h3>
-                        <?php the_content(''); ?>
-                        <!-- <?php the_excerpt(); ?> -->
+                        <?php
+                            $content = get_the_content();
+                            $check = 'more-';
+                                if ( strpos( $content, $check ) !== false ) {
+                                the_content('');//続きを読むが入っている場合は投稿内容を表示
+                                }else {
+                                    the_excerpt();
+                                }
+                        ?>
                         <button onclick="location.href='<?php the_permalink(); ?>'" class="c-button p-card__button">詳しく見る</button>
                     </div>
                 </section>

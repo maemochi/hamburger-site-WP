@@ -65,3 +65,9 @@ function empty_search( $query ) {
 }
 add_action( 'pre_get_posts', 'empty_search' );
 
+//抜粋文の[...]を削除-------------------------------
+function delete_excerpt_more($more) {
+	return '';
+}
+add_filter('excerpt_more', 'delete_excerpt_more');
+
