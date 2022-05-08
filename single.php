@@ -19,8 +19,8 @@
             <h1 class="c-title c-title--m p-main__title p-main--single__title"><?php the_title();?></h1>
         </div>
         
-        <article class="p-container p-container--single p-article"><!--WP化 調整用にp-articleを追加-->
-            <?php the_content(); ?><!--投稿本文を取得-->
+        <article id="post-<?php the_ID(); ?>" <?php post_class('p-container p-container--single p-article'); ?>>
+        <?php the_content(); ?><!--投稿本文を取得-->
         </article>
         <?php wp_link_pages( array(
             'before' => '<div class="wp-pagenavi wp-pagenavi--post">',
