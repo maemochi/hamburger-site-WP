@@ -89,7 +89,7 @@
             $page = get_post( $access_page_id );
             $title = $page -> post_title;
             $content = $page -> post_content; ?>
-            <h2 class="c-title c-title--m p-access__title"><a href="<?php echo home_url('/access'); ?>"><?php echo( $title ) ?></a></h2>
+            <h2 class="c-title c-title--m p-access__title"><a href="<?php echo esc_url(home_url('/access') ); ?>"><?php echo( $title ) ?></a></h2>
             <span class="c-line p-access__line"></span>
             <p class="p-access__text">
                 <?php 
