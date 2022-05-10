@@ -23,6 +23,9 @@
     @include m.mq(pc) {
       font-size: 36px;
     }
+    > a {
+      color: v.$font-color-light;
+    }
   }
   &__line {
     z-index: 300;

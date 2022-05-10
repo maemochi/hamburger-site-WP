@@ -25,9 +25,6 @@
     &--first {
       background-image: url(images/front-page_article_bg01.jpg);
       background-position: center;
-      > .c-title {
-        color: #eaeaea;
-      }
     }
     &--second {
       background-image: url(images/front-page_article_bg02.jpg);
@@ -44,6 +41,7 @@
     }
   }
   &__title {
+    color: v.$font-color-light;
     font-size: 41px;
     position: absolute;
     top: clamp(11px, 1.834vw, 20px);
@@ -54,6 +52,9 @@
         font-size: clamp(44px, 4.293vw, 80px);
       }
     }
+    a {
+      color: v.$font-color-light;
+    }
   }
   &__line {
     position: absolute;
@@ -63,12 +64,6 @@
     @include m.mq(pc) {
       top: clamp(86px, 8.39vw, 160.5px);
     }
-    &--first {
-      display: none;
-      @include m.mq(tab) {
-        display: block;
-      }
-    }
   }
   &__subtitle {
     font-size: 22px;
@@ -76,6 +71,9 @@
     padding: 19px 0 19px 10px;
     @include m.mq(tab) {
       font-size: 24px;
+    }
+    a {
+      color: v.$font-color-dark;
     }
   }
   &__text {
