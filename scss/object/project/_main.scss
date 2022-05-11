@@ -60,16 +60,11 @@
     }
   }
   &--single {
-    // background-image: url(images/single_bg_sp.jpg);
     height: 225px;
     position: relative; //WP 一旦--singleに設定（imgの上に文字を配置するため）
     @include m.mq(tab) {
       height: 500px;
-      // background-image: url(images/single_bg_tab.jpg);
     }
-    // @include m.mq(xl) {
-    //     background-image: url(images/single_bg_pc.jpg);
-    // }
     &__title {
       position: absolute; //WP 一旦--singleに設定（imgの上に文字を配置するため）
       @include m.mq(tab) {
@@ -94,11 +89,5 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    // &--single {
-    //     height: 225px;
-    //     @include m.mq(tab) {
-    //         height: 500px;
-    //     }
-    // }
   }
 }

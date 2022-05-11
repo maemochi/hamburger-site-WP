@@ -12,10 +12,10 @@
         
         <article class="p-container p-container--archive">
             <section class="p-description">
-              <?php if (!$_GET['s']): ?>
-                  <h2 class="c-title p-description__title">検索キーワードが未入力です。</h2>
-              <?php else: ?>
-                  <h2 class="c-title p-description__title">「<?php echo esc_html($_GET['s']); ?>」の検索結果：<?php echo $wp_query->found_posts; ?>件</h2>
+            <?php if (!$_GET['s']): ?>
+                <h2 class="c-title p-description__title">検索キーワードが未入力です。</h2>
+            <?php else: ?>
+                <h2 class="c-title p-description__title">「<?php echo esc_html($_GET['s']); ?>」の検索結果：<?php echo $wp_query->found_posts; ?>件</h2>
             </section>
 
                 <?php if(have_posts()): ?>
@@ -25,7 +25,7 @@
                     <?php if(has_post_thumbnail()): ?>
                     <?php the_post_thumbnail('large',array('class' => 'p-card__img')); ?>
                     <?php else: ?>
-                      <img src="<?php echo esc_url(get_theme_file_uri('/images/archive_img.jpg')); ?>" alt="" class="p-card__img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/images/archive_img.jpg')); ?>" alt="" class="p-card__img">
                     <?php endif; ?>
                     <div class="p-card__text-box">
                         <h3 class="c-title p-card__title"><?php the_title(); ?></h3>
@@ -43,7 +43,7 @@
                 </section>
                 <?php endwhile; ?>
                 <?php else: ?><p>検索されたキーワードに一致する記事はありませんでした。</p>
-                  <?php endif; ?>
+                <?php endif; ?>
         </article>
 
         <?php wp_pagenavi(); ?><!-- if=trueの時（＝キーワード未入力時）はwp_pagenaviを読み込まない -->
